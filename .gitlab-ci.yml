@@ -15,7 +15,7 @@ build:
     - cp -r include ./Package
     - cp main.cpp ./Package
     - cd ./Package
-    - g++ main.cpp -o main
+    - g++ -srd=c++17 main.cpp -o main
   artifacts:
     paths:
       - Package/
