@@ -34,3 +34,8 @@ deploy1:
   stage: deploy
   script:
     - echo "Do your deploy here"
+    - echo "Compile main.cpp & Archive this directory"
+    - echo ">>> Compile"
+    - g++ -std=c++17 main.cpp -o main
+    - echo ">>> Archive"
+    - tar -zcvf Othello.tgz  include main.cpp main
