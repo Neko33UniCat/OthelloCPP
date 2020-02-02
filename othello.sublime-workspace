@@ -1,0 +1,542 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bla",
+				"Black"
+			],
+			[
+				"SHow",
+				"ShowIDs"
+			],
+			[
+				"sow",
+				"ShowIDs"
+			],
+			[
+				"S",
+				"Show"
+			],
+			[
+				"show",
+				"ShowIDs"
+			],
+			[
+				"Show",
+				"ShowIDs"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"inc",
+				"inc\t#include \"…\""
+			],
+			[
+				"fi",
+				"file_base_name"
+			],
+			[
+				"s",
+				"Show"
+			],
+			[
+				"st",
+				"std"
+			],
+			[
+				"ios",
+				"iostream\tstandard header"
+			],
+			[
+				"tr",
+				"try\tTry/Except"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.cpp",
+			"settings":
+			{
+				"buffer_size": 358,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/BitBoard.hpp",
+			"settings":
+			{
+				"buffer_size": 9521,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "othello.sublime-project",
+			"settings":
+			{
+				"buffer_size": 130,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++17.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++17.sublime-build",
+					"compile"
+				],
+				[
+					"Packages/User/C++17.sublime-build",
+					"runTerminal"
+				]
+			],
+			[
+				"Packages/User/C++17.sublime-build",
+				"runTerminal"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++17.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++17.sublime-build",
+					"runTerminal"
+				]
+			],
+			[
+				"Packages/User/C++17.sublime-build",
+				"runTerminal"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"run",
+				"Build With: C++ Single File - Run"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"gcc",
+				"Package Control: Install Package"
+			],
+			[
+				"packagecontrol:",
+				"Package Control: Add Channel"
+			],
+			[
+				"pyton",
+				"Set Syntax: Python"
+			],
+			[
+				"Install Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"install",
+			"ls",
+			"./main",
+			"main",
+			"package",
+			"exit()",
+			"Install Package Control"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/hiroaki/Desktop/Othello"
+	],
+	"file_history":
+	[
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/hiroaki/Desktop/Othello/main",
+		"/Users/hiroaki/Desktop/Othello/hoge.cpp",
+		"/Users/hiroaki/Desktop/Othello/include/BitBoard.hpp",
+		"/Users/hiroaki/Desktop/Othello/main.cpp",
+		"/Users/hiroaki/Desktop/Othello/include/Othello.hpp",
+		"/Users/hiroaki/Desktop/Othello/include/Functions.hpp",
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/hiroaki/Desktop/Othello/include/untitled",
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/User/C++17.sublime-build",
+		"/Users/hiroaki/Desktop/Othello/hoge",
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/Users/hiroaki/Desktop/sublimec++/main",
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/SublimeLinter-gcc/CHANGELOG.md",
+		"/Users/hiroaki/Library/Application Support/Sublime Text 3/Packages/SublimeLinter-gcc/miscellaneous/demo.cpp"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								358,
+								358
+							]
+						],
+						"settings":
+						{
+							"SL.27.region_keys":
+							[
+								"SL.clang++.Highlights.|9a5dd4e48441476f3fbd705837ab837b2b5868bfb1ea4952a8c9fb4937500633|region.yellowish markup.warning.sublime_linter|32",
+								"SL.clang++.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"SL.30.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.clang++.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.clang++.Highlights.|9a5dd4e48441476f3fbd705837ab837b2b5868bfb1ea4952a8c9fb4937500633|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.41.region_keys":
+							[
+								"SL.clang++.Highlights.|9a5dd4e48441476f3fbd705837ab837b2b5868bfb1ea4952a8c9fb4937500633|region.yellowish markup.warning.sublime_linter|32",
+								"SL.clang++.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "include/BitBoard.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								693,
+								693
+							]
+						],
+						"settings":
+						{
+							"SL.28.region_keys":
+							[
+								"SL.clang++.Highlights.|832886e5549aa6b6139299b21d3b75475f8f5bb3fb0b667bcd6c4b7d996ae9bd|region.redish markup.error.sublime_linter|32",
+								"SL.clang++.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"SL.32.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.clang++.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.clang++.Highlights.|832886e5549aa6b6139299b21d3b75475f8f5bb3fb0b667bcd6c4b7d996ae9bd|region.redish markup.error.sublime_linter|32"
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "othello.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								118,
+								118
+							]
+						],
+						"settings":
+						{
+							"SL.33.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 108.0
+	},
+	"output.cc":
+	{
+		"height": 108.0
+	},
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "Packages/User/C++17.sublime-build",
+	"project": "othello.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"include/Othello.hpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 134.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
