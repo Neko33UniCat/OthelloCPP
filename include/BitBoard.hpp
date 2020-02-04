@@ -9,6 +9,7 @@
 
 using namespace std;
 using u_long = unsigned long;
+
 class BitBoard
 {
 private:
@@ -21,6 +22,7 @@ public:
     u_long canOnWhite();
     void ReverseTurnBlack(int id);
     void ReverseTurnWhite(int id);
+    int canPut[64];
     void Show();
     void Score();
     BitBoard();
