@@ -17,8 +17,8 @@ public:
     u_long Black;
     u_long White;
     int Turn; //0...Black,1...White,
-    int canOnBlack();
-    int canOnWhite();
+    u_long canOnBlack();
+    u_long canOnWhite();
     void ReverseTurnBlack(int id);
     void ReverseTurnWhite(int id);
     void Show();
@@ -33,7 +33,7 @@ BitBoard::BitBoard()
     White = 0b0000000000000000000000000001000000001000000000000000000000000000;
 }
 
-int BitBoard::canOnBlack(){
+u_long BitBoard::canOnBlack(){
     u_long white = White;
     u_long black = Black;
     u_long blank = ~(white | black);
@@ -102,6 +102,7 @@ int BitBoard::canOnBlack(){
     mobility |= blank & (t << 7);
     
     w = white & all_mask;
+    t = w & (black >> 9);
     t |= w & (t >> 9);
     t |= w & (t >> 9);
     t |= w & (t >> 9);
@@ -121,7 +122,7 @@ int BitBoard::canOnBlack(){
     ShowIDs(mobility);
     return mobility;
 }
-int BitBoard::canOnWhite(){
+u_long BitBoard::canOnWhite(){
     u_long black = Black;
     u_long white = White;
     u_long blank = ~(white | black);
@@ -206,12 +207,16 @@ int BitBoard::canOnWhite(){
 }
 void BitBoard::ReverseTurnBlack(int id){
     u_long all_mask = 0x007e7e7e7e7e7e00;
-    u_long w = White & all_mask;
+    u_long horizon_mask = 0x7e7e7e7e7e7e7e7e;
+    u_long vertical_mask = 0x00FFFFFFFFFFFF00;
+    u_long w = (u_long)0;
     u_long b = Black;
     u_long rev = (u_long)0; //反転位置
 
     u_long t = id;
     u_long p = (u_long)0;
+    w = White & horizon_mask;
+    //横
     for(int i = 1; i <= 7; i++){
         t = id + i;
         if(((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//白でも黒でもない
@@ -254,20 +259,8 @@ void BitBoard::ReverseTurnBlack(int id){
             p = p | ((u_long)1<<t);
         }
     }
-    for(int i = 1; i <= 7; i++){
-        t = id - 7*i;
-        if(((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//白でも黒でもない
-            //ひっくり返せない
-            p = (u_long)0;
-            break;
-        }else if(((u_long)1 << t & b)){ //黒なら
-            rev = rev | p;//revに反映
-            p = (u_long)0;//初期化
-            break;
-        }else if(((u_long)1 << t & w)){//白なら
-            p = p | ((u_long)1<<t);
-        }
-    }
+    //縦
+    w = White & vertical_mask;
     for(int i = 1; i <= 7; i++){
         t = id + 8*i;
         if(((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//白でも黒でもない
@@ -284,6 +277,22 @@ void BitBoard::ReverseTurnBlack(int id){
     }
     for(int i = 1; i <= 7; i++){
         t = id - 8*i;
+        if(((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//白でも黒でもない
+            //ひっくり返せない
+            p = (u_long)0;
+            break;
+        }else if(((u_long)1 << t & b)){ //黒なら
+            rev = rev | p;//revに反映
+            p = (u_long)0;//初期化
+            break;
+        }else if(((u_long)1 << t & w)){//白なら
+            p = p | ((u_long)1<<t);
+        }
+    }
+    //斜め
+    w = White & all_mask;
+    for(int i = 1; i <= 7; i++){
+        t = id - 7*i;
         if(((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//白でも黒でもない
             //ひっくり返せない
             p = (u_long)0;
@@ -329,12 +338,15 @@ void BitBoard::ReverseTurnBlack(int id){
 }
 void BitBoard::ReverseTurnWhite(int id){
     u_long all_mask = 0x007e7e7e7e7e7e00;
-    u_long b = Black & all_mask;
+    u_long horizon_mask = 0x7e7e7e7e7e7e7e7e;
+    u_long vertical_mask = 0x00FFFFFFFFFFFF00;
+    u_long b = (u_long)0;
     u_long w = White;
     u_long rev = (u_long)0; //反転位置
 
     u_long t = id;
     u_long p = (u_long)0;
+    b = Black & horizon_mask;
     for (int i = 1; i <= 7; i++){
         t = id + i;
         if (((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//隣が白でも黒でもない
@@ -363,34 +375,8 @@ void BitBoard::ReverseTurnWhite(int id){
             p = p | (u_long)1 << t;
         }
     }
-    for (int i = 1; i <= 7; i++){
-        t = id + 7*i;
-        if (((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//隣が白でも黒でもない
-            //ひっくり返せない
-            p = (u_long)0;
-            break;
-        }else if((u_long)1 << t & w){//白なら
-            rev = rev | p;//revに反映
-            p = (u_long)0;//初期化
-            break;
-        }else if((u_long)1 << t & b){//黒なら
-            p = p | (u_long)1 << t;
-        }
-    }
-     for (int i = 1; i <= 7; i++){
-        t = id - 7*i;
-        if (((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//隣が白でも黒でもない
-            //ひっくり返せない
-            p = (u_long)0;
-            break;
-        }else if((u_long)1 << t & w){//白なら
-            rev = rev | p;//revに反映
-            p = (u_long)0;//初期化
-            break;
-        }else if((u_long)1 << t & b){//黒なら
-            p = p | (u_long)1 << t;
-        }
-    }
+
+    b = Black & vertical_mask;
     for (int i = 1; i <= 7; i++){
         t = id + 8*i;
         if (((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//隣が白でも黒でもない
@@ -419,6 +405,37 @@ void BitBoard::ReverseTurnWhite(int id){
             p = p | (u_long)1 << t;
         }
     }
+
+    b=Black & all_mask;
+    for (int i = 1; i <= 7; i++){
+        t = id + 7*i;
+        if (((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//隣が白でも黒でもない
+            //ひっくり返せない
+            p = (u_long)0;
+            break;
+        }else if((u_long)1 << t & w){//白なら
+            rev = rev | p;//revに反映
+            p = (u_long)0;//初期化
+            break;
+        }else if((u_long)1 << t & b){//黒なら
+            p = p | (u_long)1 << t;
+        }
+    }
+     for (int i = 1; i <= 7; i++){
+        t = id - 7*i;
+        if (((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//隣が白でも黒でもない
+            //ひっくり返せない
+            p = (u_long)0;
+            break;
+        }else if((u_long)1 << t & w){//白なら
+            rev = rev | p;//revに反映
+            p = (u_long)0;//初期化
+            break;
+        }else if((u_long)1 << t & b){//黒なら
+            p = p | (u_long)1 << t;
+        }
+    }
+
     for (int i = 1; i <= 7; i++){
         t = id + 9*i;
         if (((u_long)1 << t & w)==(u_long)0 && ((u_long)1 << t & b)==(u_long)0){//隣が白でも黒でもない
@@ -464,20 +481,24 @@ void BitBoard::Show(){
     //     }
     //     cout<<'\n';
     // }
+    cout<<" "<<"  0   1   2   3   4   5   6   7  "<<endl;
+    cout<<" "<<"+---+---+---+---+---+---+---+---+"<<endl;
     for (int i = 0; i <= 7; i++)
     {
+        cout<<(char)(65+i)<<'|';
         for(int j=0;j<=7;j++){
             int id = i*8+j;
             u_long flag = (u_long)1 << id;
             if(Black & flag){
-                cout<<"b ";
+                cout<<" b  ";
             }else if(White & flag){
-                cout<<"w ";
+                cout<<" w  ";
             }else{
-                cout<<"* ";
+                cout<<" *  ";
             }
         }
         cout<<'\n';
+        cout<<" +"<<endl;
     }
     cout<<endl;
 }

@@ -6,6 +6,46 @@
 		}
 	],
 	"settings":{
-	
+		"linters":
+		    {
+		        "gcc": {
+		            "disable": false,
+		            "executable": ["gcc"],
+		            "args": ["-fsyntax-only", "-std=c90"],
+		            "I": [
+		                "${file_path}/include",
+		                "${folder}/include",
+		                "/usr/local/include",
+		            ],
+		            "excludes": [],
+		        },
+		        "g++": {
+		            "disable": false,
+		            "executable": ["g++"],
+		            "args": ["-fsyntax-only", "-std=c++17"],
+		            "I": [
+		                "${folder}/include/Functions.hpp",
+		                "{folder}/include/Othello.hpp",
+		                "${file_path}/include/BitBoard.hpp",
+		                "${folder}/include",
+		                "/usr/local/include",
+		            ],
+		            "excludes": [],
+		        },
+		        "clang++": {
+		            "disable": false,
+		            "executable": ["g++"],
+		            "args": ["-fsyntax-only", "-std=c++17"],
+		            "I": [
+		                "${file_path}/include/Functions.hpp",
+		                "{file_path}/include/Othello.hpp",
+		                "${file_path}/include/BitBoard.hpp",
+		                "${folder}/include",
+		                "/usr/local/include",
+		            ],
+		            "excludes": [],
+		        },
+		    },
+		}
 	}
 }
