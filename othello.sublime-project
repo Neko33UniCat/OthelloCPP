@@ -27,6 +27,7 @@
 		                "${folder}/include/Functions.hpp",
 		                "{folder}/include/Othello.hpp",
 		                "${file_path}/include/BitBoard.hpp",
+		                "/Users/hiroaki/Desktop/Othello/include/"
 		                "${folder}/include",
 		                "/usr/local/include",
 		            ],
