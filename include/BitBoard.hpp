@@ -8,7 +8,7 @@
 #include "Functions.hpp"
 
 using namespace std;
-using u_long = unsigned long;
+using u_long = unsigned long long;
 
 class BitBoard
 {
